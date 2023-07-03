@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout position</title>
+    <style>
+        .main {
+            position: relative;
+        }
+
+        .left {
+            position: absolute;
+            width: 200px;
+            border: 2px solid #FDC72F;
+            height: 200px;
+        }
+
+        .right {
+            width: 300px;
+            margin-left: 210px;
+            border: 2px solid #FDC72F;
+            height: 200px;
+        }
+
+        .abs-box {
+            position: relative;
+            height: 100px;
+            background-color: burlywood;
+        }
+
+        .abs-box .left-top {
+            background-color: #FDC72F;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0 3px;
+        }
+
+        .abs-box .right-bottom{
+            background-color: #FDC72F;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0 3px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <div class="abs-box">
+            <span class="left-top">左上</span>
+            <p>1</p>
+            <span class="right-bottom">右下</span>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="abs-box">
+            <span class="left-top">内容</span>
+            <p>1</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
